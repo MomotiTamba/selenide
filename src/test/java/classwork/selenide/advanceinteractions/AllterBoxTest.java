@@ -19,7 +19,7 @@ public class AllterBoxTest extends SelenideTestBase {
         open(webPageForW3);
         switchTo().frame("iframeResult");
         $(By.xpath("html/body/button")).click();
-        switchTo().alert().dismiss();
+        switchTo().alert().accept();
         $(By.id("demo")).shouldHave(text(cancelled));
     }
 }
