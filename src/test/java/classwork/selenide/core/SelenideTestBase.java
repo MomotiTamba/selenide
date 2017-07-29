@@ -1,7 +1,5 @@
 package classwork.selenide.core;
 
-
-import classwork.selenium.core.TestListener;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.WebDriverRunner;
 import io.github.bonigarcia.wdm.ChromeDriverManager;
@@ -34,6 +32,7 @@ public class SelenideTestBase {
                 break;
         }
         Configuration.browser = browser;
+        Configuration.timeout = Long.parseLong(getProperty("timeout"));
         Configuration.reportsFolder = getProperty("screenshot.folder");
     }
 }
